@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  genesis:
+    build: ./genesis
+    container_name: genesis-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - GENESIS_MODE=embedded
+    volumes:
+      - .:/app
